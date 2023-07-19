@@ -40,10 +40,10 @@ Instagram : @fathiyacakeandcookies</div>
     
             <!--Block-->
             <li class="accordion block">
-                <div class="acc-btn"><div class="icon-outer"><span class="icon fa fa-plus"></span> </div> Metode pembayaran apa saja yang diterima?</div>
+                <div class="acc-btn"><div class="icon-outer"><span class="icon fa fa-plus"></span> </div> Metode pembayaran apa saja yang diterima Rayinbow Salad?</div>
                 <div class="acc-content">
                     <div class="content">
-                        <div class="text">Kami menerima pembayaran via transfer Bank dan Cash On Delivery</div>
+                        <div class="text">Kami menerima pembayaran via transfer Bank, GoPay, dan ShopeePay</div>
                     </div>
                 </div>
             </li>
@@ -58,19 +58,19 @@ Instagram : @fathiyacakeandcookies</div>
             </li>
             <!--Block-->
             <li class="accordion block">
-                <div class="acc-btn"><div class="icon-outer"><span class="icon fa fa-plus"></span> </div> Apakah Rayinbow Salad and Cookies memiliki cabang di kota lain?</div>
+                <div class="acc-btn"><div class="icon-outer"><span class="icon fa fa-plus"></span> </div> Apakah Rayinbow Salad memiliki cabang di kota lain?</div>
                 <div class="acc-content">
                     <div class="content">
-                        <div class="text">Untuk saat ini Rayinbow Salad and Cookies hanya tersedia di Kota Cilegon</div>
+                        <div class="text">Untuk saat ini Rayinbow Salad hanya tersedia di Kota Harapan Indah</div>
                     </div>
                 </div>
             </li>
             <!--Block-->
             <li class="accordion block">
-                <div class="acc-btn"><div class="icon-outer"><span class="icon fa fa-plus"></span> </div> Kapan jam operasional pemesanan produk via website / Whatsapp / Instagram?</div>
+                <div class="acc-btn"><div class="icon-outer"><span class="icon fa fa-plus"></span> </div> Kapan jam operasional pemesanan produk via Instagram?</div>
                 <div class="acc-content">
                     <div class="content">
-                        <div class="text">Jam operasional kami dari hari Senin-Minggu pukul 08.00-16.00
+                        <div class="text">Jam operasional instagram @saladbuah_rayinbow, dari hari Senin-Minggu pukul 08.00-16.00
 Apabila telah berada diluar jam operasional, pertanyaan maupun pemesanan akan kami proses pada jam layanan berikutnya.</div>
                     </div>
                 </div>

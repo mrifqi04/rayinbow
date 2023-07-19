@@ -14,7 +14,7 @@
                         data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 
                         <!-- MAIN IMAGE -->
-                        <img src="{{ asset('vendor/bellaria') }}/images/main-slider/5.jpeg" alt="" title="Home Cakes"
+                        <img src="{{ asset('vendor/bellaria') }}/images/main-slider/asd.png" alt="" title="Home Cakes"
                             data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg"
                             data-no-retina>
                         <!-- LAYERS -->
@@ -48,7 +48,7 @@
                             data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]"
                             data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
                             style="z-index: 7; white-space: nowrap; font-size: 16px; line-height: 24px; font-weight: 400; color: #4b4342;font-family:ABeeZee; margin-top: 100px">
-                            We offer now a great range of different<br>flavoured bite-size pastries and cakes </div>
+                            We offer now a great range of different<br>flavoured bite-size Rayinbow Salad</div>
 
                         <!-- LAYER NR. 4 -->
                         <div class="tp-caption   tp-resizeme" id="slide-4-layer-31" data-x="center" data-hoffset=""
@@ -135,7 +135,7 @@
                             data-textAlign="['center','center','center','center']" data-paddingtop="[,0,0,0]"
                             data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
                             style="z-index: 7; white-space: nowrap; font-size: 16px; line-height: px; font-weight: 400; color: #4b4342;font-family:ABeeZee; margin-top: 100px;">
-                            We offer now a great range of different<br> flavoured bite-size pastries and cakes </div>
+                            We offer now a great range of different<br> flavoured bite-size Rayinbow Salad</div>
 
                         <!-- LAYER NR. 11 -->
                         <div class="tp-caption   tp-resizeme" id="slide-5-layer-31" data-x="center" data-hoffset=""
@@ -221,7 +221,7 @@
                             data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]"
                             data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
                             style="z-index: 7; white-space: nowrap; font-size: 16px; line-height: 24px; font-weight: 400; color: #4b4342; font-family:ABeeZee; margin-top: 100px">
-                            We offer now a great range of different<br> flavoured bite-size pastries and cakes </div>
+                            We offer now a great range of different<br> flavoured bite-size Rayinbow Salad</div>
 
                         <!-- LAYER NR. 18 -->
                         <div class="tp-caption   tp-resizeme" id="slide-6-layer-31" data-x="center" data-hoffset=""

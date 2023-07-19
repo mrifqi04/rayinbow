@@ -157,8 +157,9 @@
                             <div class="footer-widget newslatter-widget">
                                 <div class="widget-title">
                                     <h3>Alamat Kami</h3>
-                                    <p class="text-white">Pondok Cilegon Indah Blok B 40 No. 16, Kedaleman, Cibeber,
-                                        Cilegon City, Banten 42422</p>
+                                    <p class="text-white">
+                                        Jalan Flamboyan Indah I Blok LC No. 9A, RT.007/RW.016, Pejuang, Kec. Bekasi Bar., Kota Bks, Jawa Barat 17131
+                                    </p>
                                 </div>
                             </div>
                         </div>

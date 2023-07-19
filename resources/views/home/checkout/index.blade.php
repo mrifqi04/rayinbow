@@ -37,7 +37,7 @@
                                 <div class="sec-title">
                                     <h3>Detail Pengiriman</h3>
                                 </div>
-                                <div class="form-row">
+                                {{-- <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="email">Email</label>
                                         <input type="email" class="form-control" id="email" name="email"
@@ -48,7 +48,7 @@
                                         <input type="text" class="form-control" id="name" name="name"
                                             placeholder="Name">
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="form-group">
                                     <label for="address">Alamat</label>
                                     <input type="text" class="form-control" id="address" name="address"
