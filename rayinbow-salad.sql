@@ -51,6 +51,7 @@ CREATE TABLE `orders` (
   `payment` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `telephone` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `payment_method` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ongkir` decimal(20,2) DEFAULT NULL,
   `information` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status` varchar(191) CHARACTER SET utf8mb4 DEFAULT NULL,
   `send_by` varchar(191) CHARACTER SET utf8mb4 DEFAULT NULL,
@@ -61,9 +62,13 @@ CREATE TABLE `orders` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `orders` (`id`, `user_id`, `date`, `address`, `city`, `province`, `postal`, `payment`, `telephone`, `payment_method`, `information`, `status`, `send_by`, `due_date`, `take_time`, `created_at`, `updated_at`) VALUES
-(1,	5,	'2023-06-12 06:46:58',	'Bekasi',	'Bekasi',	'Jawa Barat',	'17124',	'gojek.png',	'0812128389488',	'transfer',	NULL,	'Success',	'courir',	NULL,	NULL,	'2023-06-12 06:43:08',	'2023-06-12 06:46:58'),
-(2,	5,	'2023-06-12 07:18:55',	'Bekasi',	'Bekasi',	'Jawa Barat',	'17124',	'Picture1.jpg',	'0812128389488',	'gopay',	NULL,	'Success',	NULL,	NULL,	NULL,	'2023-06-12 06:53:30',	'2023-06-12 07:18:55');
+INSERT INTO `orders` (`id`, `user_id`, `date`, `address`, `city`, `province`, `postal`, `payment`, `telephone`, `payment_method`, `ongkir`, `information`, `status`, `send_by`, `due_date`, `take_time`, `created_at`, `updated_at`) VALUES
+(1,	5,	'2023-06-12 06:46:58',	'Bekasi',	'Bekasi',	'Jawa Barat',	'17124',	'gojek.png',	'0812128389488',	'transfer',	NULL,	NULL,	'Success',	'courir',	NULL,	NULL,	'2023-06-12 06:43:08',	'2023-06-12 06:46:58'),
+(2,	5,	'2023-06-12 07:18:55',	'Bekasi',	'Bekasi',	'Jawa Barat',	'17124',	'Picture1.jpg',	'0812128389488',	'gopay',	NULL,	NULL,	'Success',	NULL,	NULL,	NULL,	'2023-06-12 06:53:30',	'2023-06-12 07:18:55'),
+(3,	5,	'2023-07-19 16:37:44',	'Bekasi',	'Bekasi',	'Jawa Barat',	'17124',	'Picture1.jpg',	'0812128389488',	'gopay',	NULL,	NULL,	'Success',	'courir',	NULL,	NULL,	'2023-07-19 16:33:17',	'2023-07-19 16:37:44'),
+(4,	5,	'2023-07-19 16:36:39',	'Bekasi',	'Bekasi',	'Jawa Barat',	'17124',	'gojek.png',	'0812128389488',	'transfer',	NULL,	NULL,	'Success',	'courir',	NULL,	NULL,	'2023-07-19 16:34:59',	'2023-07-19 16:36:39'),
+(5,	5,	'2023-08-18 08:42:00',	'Bekasi',	'Bekasi Utara',	'Jawa Barat',	'17124',	NULL,	'0812128389488',	'transfer',	NULL,	'Bekasi',	'Pending',	NULL,	NULL,	NULL,	'2023-08-18 08:42:00',	'2023-08-18 08:42:00'),
+(6,	5,	'2023-08-18 08:52:37',	'Bekasi',	'Bekasi Utara',	'Jawa Barat',	'17124',	'ik5.jpeg',	'0812128389488',	'transfer',	20000.00,	NULL,	'Success',	'courir',	NULL,	NULL,	'2023-08-18 08:46:21',	'2023-08-18 08:52:37');
 
 DROP TABLE IF EXISTS `order_items`;
 CREATE TABLE `order_items` (
@@ -79,7 +84,11 @@ CREATE TABLE `order_items` (
 
 INSERT INTO `order_items` (`id`, `order_id`, `product_id`, `quantity`, `price`, `created_at`, `updated_at`) VALUES
 (1,	1,	1,	1,	20000.00,	'2023-06-12 06:43:08',	'2023-06-12 06:43:08'),
-(2,	2,	2,	1,	25000.00,	'2023-06-12 06:53:30',	'2023-06-12 06:53:30');
+(2,	2,	2,	1,	25000.00,	'2023-06-12 06:53:30',	'2023-06-12 06:53:30'),
+(3,	3,	2,	2,	25000.00,	'2023-07-19 16:33:17',	'2023-07-19 16:33:17'),
+(4,	4,	2,	2,	25000.00,	'2023-07-19 16:34:59',	'2023-07-19 16:34:59'),
+(5,	5,	3,	1,	90000.00,	'2023-08-18 08:42:00',	'2023-08-18 08:42:00'),
+(6,	6,	1,	1,	20000.00,	'2023-08-18 08:46:21',	'2023-08-18 08:46:21');
 
 DROP TABLE IF EXISTS `password_resets`;
 CREATE TABLE `password_resets` (
@@ -104,8 +113,8 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO `products` (`id`, `name`, `price`, `description`, `stock`, `image`, `created_at`, `updated_at`) VALUES
-(1,	'Salad Buah Enak',	20000.00,	'enak',	2,	'1.webp',	'2022-10-29 15:57:53',	'2023-06-12 06:45:11'),
-(2,	'Paket 2',	25000.00,	'Salad enak',	9,	'2.webp',	'2023-06-07 16:01:18',	'2023-06-12 06:54:11'),
+(1,	'Salad Buah Enak',	20000.00,	'enak',	1,	'1.webp',	'2022-10-29 15:57:53',	'2023-08-18 08:51:34'),
+(2,	'Paket 2',	25000.00,	'Salad enak',	5,	'2.webp',	'2023-06-07 16:01:18',	'2023-07-19 16:35:04'),
 (3,	'Paket 3',	90000.00,	'Salad paket 3 pake toge',	8,	'3.webp',	'2023-06-07 16:01:45',	'2023-06-07 16:01:45');
 
 DROP TABLE IF EXISTS `users`;
@@ -128,4 +137,4 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `creat
 (4,	'Desi Natalia',	'desi@gmail.com',	'$2y$10$ZWwqY3rvoNf.mYz3/aRa.OVDxiVrBL6E6F6BmXozBnBtQs0BhnNLW',	NULL,	'2019-08-12 00:08:50',	'2019-08-12 00:08:50'),
 (5,	'akmal',	'akmal@mail.com',	'$2y$10$AmK.WTy1T0IUkc/8kSm.kOhE0y2mQaxr91VRNt.Xp5FUe3pyzOCle',	NULL,	'2023-06-12 06:39:33',	'2023-06-12 06:39:33');
 
--- 2023-06-12 07:43:31
+-- 2023-08-18 14:21:21
