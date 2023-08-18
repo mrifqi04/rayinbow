@@ -113,8 +113,10 @@
 
         <!-- Mobile Header -->
         <div class="mobile-header">
-            <div class="logo"><a href="{{ url('/') }}"><img
-                        src="{{ asset('vendor/bellaria') }}/images/logo-small.png" alt="" title=""></a>
+            <div class="logo">
+                <a href="{{ url('/') }}">
+                    <img src="{{ asset('vendor/bellaria') }}/images/logo2.png">
+                </a>
             </div>
 
             <!--Nav Box-->
@@ -126,9 +128,11 @@
         <!-- Mobile Menu  -->
         <div class="mobile-menu">
             <nav class="menu-box">
-                <div class="nav-logo"><a href="{{ url('/') }}"><img
-                            src="{{ asset('vendor/bellaria') }}/images/logo-small.png" alt=""
-                            title=""></a></div>
+                <div class="nav-logo">
+                    <a href="{{ url('/') }}">
+                        <img src="{{ asset('vendor/bellaria') }}/images/logo2.png" alt="" title="">
+                    </a>
+                </div>
                 <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
             </nav>
         </div><!-- End Mobile Menu -->

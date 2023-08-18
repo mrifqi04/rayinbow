@@ -5,18 +5,18 @@
     <section class="login-section">
         <div class="auto-container">
             <!-- Login Form -->
-            <div class="login-form">
-                <h2>Login</h2>
+            <div class="login-form text-dark">
+                <h2 class="text-dark">Login</h2>
                 <!--Login Form-->
                 <form method="post" action="{{ url('/user/login') }}">
                     {{ csrf_field() }}
                     <div class="form-group">
-                        <label>Email address *</label>
+                        <label class="text-dark">Email address *</label>
                         <input type="text" name="email" placeholder="" required>
                     </div>
                     
                     <div class="form-group">
-                        <label>Password *</label>
+                        <label class="text-dark">Password *</label>
                         <input type="password" name="password" placeholder="" required>
                     </div>
                     
@@ -33,7 +33,7 @@
                             <a href="login.html#" class="psw">Lost your password?</a>                        
                         </div> --}}
                         <div class="form-group pass ml-4">
-                            <a href="/user/register" class="psw">Don't have an account?</a>
+                            <a href="/user/register" class="psw text-dark">Don't have an account?</a>
                         </div>
                     </div>
                 </form>

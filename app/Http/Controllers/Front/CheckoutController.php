@@ -24,13 +24,9 @@ class CheckoutController extends Controller
     }
 
     public function store(Request $request) {
-        // dd($request);
-
         $now_date = Carbon::now();        
 
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email',
+        $request->validate([            
             'address' => 'required',
             'city' => 'required',
             'province' => 'required',
@@ -57,7 +53,8 @@ class CheckoutController extends Controller
                 'telephone' => $request->phone,
                 'payment_method' => $request->payment_method,
                 'information' => $request->information,                
-                'status' => 'Pending'
+                'status' => 'Pending',
+                'ongkir' => $request->ongkir
             ]);
 
             // Insert into order items table

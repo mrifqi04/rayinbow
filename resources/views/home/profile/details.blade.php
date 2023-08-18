@@ -83,19 +83,19 @@
                                         <form action="{{ url('/user/order/verify') }}/{{ $order->id }}" method="post"
                                             enctype="multipart/form-data">
                                             {{ csrf_field() }}
-                                            <p>Pilih pengiriman</p>
+                                            {{-- <p>Pilih pengiriman</p>
                                             <div class="form-group">
                                                 <select name="taken_by" class="form-control">
                                                     <option value="courir">Kurir</option>
                                                     <option value="by_self">Ambil Sendiri</option>
                                                 </select>
-                                            </div>
+                                            </div> --}}
                                             <button type="submit" class="theme-btn">Kirim</button>
                                         </form>
                                     </td>
                                 @elseif ($order->payment_method == 'cod')
                                     <td>COD</td>
-                                @elseif($order->status == 'Confirmed' && $order->payment_method == 'transfer')
+                                @elseif($order->status == 'Confirmed')
                                     <td>
                                         <form action="{{ url('/user/order/verify') }}/{{ $order->id }}" method="post"
                                             enctype="multipart/form-data">
@@ -103,14 +103,14 @@
                                             <div class="form-group">
                                                 <input type="file" name="payment" class="form-control">
                                             </div>
-                                            <p>Pilih pengiriman</p>
+                                            {{-- <p>Pilih pengiriman</p>
                                             <div class="form-group">
                                                 <select name="taken_by" class="form-control">
                                                     <option value="courir">Kurir</option>
                                                     <option value="by_self">Ambil Sendiri</option>
                                                 </select>
-                                            </div>
-                                            <button type="submit" class="theme-btn">Upload</button>
+                                            </div> --}}
+                                            <button type="submit" class="theme-btn btn btn-primary">Upload</button>
                                         </form>
                                     </td>
                                 @elseif($order->status == 'Verifying')
@@ -118,7 +118,8 @@
                                         Sedang menunggu konfirmasi pembayaran dari Admin
                                     </td>
                                 @elseif ($order->status != 'Pending')
-                                    <td><a href="{{ asset('uploads') }}/{{ $order->payment }}" target="_blank">Lihat
+                                    <td>
+                                        <a href="{{ asset('uploads') }}/{{ $order->payment }}" target="_blank">Lihat
                                             @if ($order->status != 'Pending' || $order->status != 'Verifying' || $order->status != 'Finished')
                                                 <a class="theme-btn" href="{{ url('/invoice' . '/' . $order->id) }}"> |
                                                     Invoice</a>
@@ -173,8 +174,9 @@
                                                 $total = $item->price * $item->quantity;
                                             @endphp
                                         @endforeach
-                                        Total : Rp{{ number_format($total, 0, ',', '.') }} <br> <br>
-
+                                        Sub total : Rp{{ number_format($total, 0, ',', '.') }} <br>
+                                        Ongkir : Rp{{ number_format($order->ongkir, 0, ',', '.') }} <br>
+                                        Total :  Rp{{ number_format($order->ongkir + $total, 0, ',', '.') }} <br> <br>
                                         @if ($order->information != null)
                                             *Notes : {{ $order->information }}
                                         @endif
